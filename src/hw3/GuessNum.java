@@ -7,11 +7,13 @@ public class GuessNum {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("開始猜數字吧!!!");
-		int GNum;
+		int gNum;
+		int guNum;
 		int num = (int) (Math.random() * 9);
+		int hNum = (int)(Math.random()*100);
 		while (true) {
-			GNum = sc.nextInt();
-			if (GNum == num) {
+			gNum = sc.nextInt();
+			if (gNum == num) {
 				System.out.println("答對了!答案就是 " + num);
 				break;
 			} else {
@@ -19,6 +21,17 @@ public class GuessNum {
 			}
 		}
 		System.out.println("===============================");
-		
+		System.out.println("開始猜數字吧!!! 0~100");
+		while (true) {
+			guNum = sc.nextInt();
+			if (guNum == hNum) {
+				System.out.println("答對了!答案就是 " + hNum);
+				break;
+			} else if(guNum > hNum){
+				System.out.println("大於正確答案");
+			}else {
+				System.out.println("小於正確答案");
+			}
+		}
 	}
 }
