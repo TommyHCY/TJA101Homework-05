@@ -8,8 +8,8 @@ public class LottoNum {
 	public static void main(String[] args) {
 		int[] lottoNum = new int[49];
 		int[] saveNum = new int[49];
-		int[] choNum = new int[6];
 		int count = 0;
+		
 		for (int i = 0; i < lottoNum.length; i++) {
 			lottoNum[i] = i + 1;
 		}
@@ -45,25 +45,24 @@ public class LottoNum {
 			}
 		}
 		System.out.print("總共有" + saveNum.length + "數字可選");
-		System.out.println("\n"+"=================================");
+		System.out.println("\n" + "=================================");
 		int[] ranIndex = new int[6];
 //		System.out.println(ranIndex.length);
 
 		for (int i = 0; i < ranIndex.length; i++) {
-			ranIndex[i] = (int) (Math.random() * saveNum.length) + 1;
+			ranIndex[i] = (int) (Math.random() * saveNum.length) ;
 		}
-
-		while (true) {
-			//  作ranIdex判斷是否有重複
+//		int[] ranIndex = { 10, 32, 5, 32, 6, 9 };
+		repeat: while (true) {
+			// 作ranIdex判斷是否有重複
 			for (int i = 0; i < ranIndex.length; i++) {
-				for (int j = 0; j < i; j++) {
+				for (int j = i + 1; j < ranIndex.length; j++) {
 					if (ranIndex[i] == ranIndex[j]) {
-						ranIndex[i] = (int) (Math.random() * saveNum.length) + 1;
-						continue;
+						ranIndex[i] = (int) (Math.random() * saveNum.length) ;
+						continue repeat;
 					} else {
-						break;
+						continue;
 					}
-
 				}
 			}
 			break;
