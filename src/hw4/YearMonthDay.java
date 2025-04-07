@@ -18,9 +18,9 @@ public class YearMonthDay {
 			if (leapYear(ymd[0])) {
 				if (ymd[1] >= 1 && ymd[1] <= 12) {
 					if ((ymd[1] == 1 || ymd[1] == 3 || ymd[1] == 5 || ymd[1] == 7 || ymd[1] == 8 || ymd[1] == 10
-							|| ymd[1] == 12) && ymd[2] == 31) {
+							|| ymd[1] == 12) && ymd[2] <= 31) {
 						break;
-					} else if ((ymd[1] == 4 || ymd[1] == 6 || ymd[1] == 9 || ymd[1] == 11) && ymd[2] == 30) {
+					} else if ((ymd[1] == 4 || ymd[1] == 6 || ymd[1] == 9 || ymd[1] == 11) && ymd[2] <= 30) {
 						break;
 					} else if (ymd[1] == 2 && ymd[2] <= 29) {
 						break;
@@ -37,9 +37,9 @@ public class YearMonthDay {
 			} else {
 				if (ymd[1] >= 1 && ymd[1] <= 12) {
 					if ((ymd[1] == 1 || ymd[1] == 3 || ymd[1] == 5 || ymd[1] == 7 || ymd[1] == 8 || ymd[1] == 10
-							|| ymd[1] == 12) && ymd[2] == 31) {
+							|| ymd[1] == 12) && ymd[2] <= 31) {
 						break;
-					} else if ((ymd[1] == 4 || ymd[1] == 6 || ymd[1] == 9 || ymd[1] == 11) && ymd[2] == 30) {
+					} else if ((ymd[1] == 4 || ymd[1] == 6 || ymd[1] == 9 || ymd[1] == 11) && ymd[2] <= 30) {
 						break;
 					} else if (ymd[1] == 2 && ymd[2] <= 28) {
 						break;
