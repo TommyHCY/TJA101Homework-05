@@ -5,9 +5,9 @@ public class CalTest {
 	public static void main(String[] args) {
 
 		Calculator c = new Calculator();
-		try {
-			c.powerXY(0, 0);
-		} catch (CalException e) {
-		}
+//		try {
+//		} catch (CalException e) {
+//		}
+		c.powerXY(0, 0);
 	}
 }

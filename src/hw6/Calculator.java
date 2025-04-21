@@ -7,7 +7,7 @@ public class Calculator {
 	private int x;
 	private int y;
 
-	public void powerXY(int x, int y) throws CalException {
+	public void powerXY(int x, int y)  {
 
 		Scanner sc = new Scanner(System.in);
 		try {
